@@ -10,7 +10,7 @@
 </head>
 <body>
     @include('partials.nav')
-    <main>
+    <main class="container">
         {{ $slot }}
     </main>
     @include('partials.footer')

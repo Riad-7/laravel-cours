@@ -9,6 +9,8 @@ Route::get('/', function () {
     return view('home');  
 });
 
-Route::get('/', [testContrller::class, 'index']);
-Route::get('/profil', [ProfilController::class, 'index']);
-Route::get('/info', [InfoController::class, 'index']);
+Route::get('/profiles', [ProfilController::class, 'index'])->name('profiles.index');
+Route::get('/profiles/{id}', [ProfilController::class, 'show'])->where('id', '\d+')->name('profile.show');
+Route::get('/info', [InfoController::class, 'index'])->name('info.index');
+Route::get('/create', [ProfilController::class, 'create'])->name('create');
+Route::get('/create', [ProfilController::class, 'store'])->name('store');
