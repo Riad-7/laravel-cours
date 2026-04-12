@@ -12,5 +12,5 @@ Route::get('/', function () {
 Route::get('/profiles', [ProfilController::class, 'index'])->name('profiles.index');
 Route::get('/profiles/{id}', [ProfilController::class, 'show'])->where('id', '\d+')->name('profile.show');
 Route::get('/info', [InfoController::class, 'index'])->name('info.index');
-Route::get('/create', [ProfilController::class, 'create'])->name('create');
-Route::get('/create', [ProfilController::class, 'store'])->name('store');
+Route::get('/profiles/create', [ProfilController::class, 'create'])->name('create');
+Route::post('/profiles/store', [ProfilController::class, 'store'])->name('store');

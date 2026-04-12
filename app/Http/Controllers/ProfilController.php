@@ -27,6 +27,13 @@ class ProfilController extends Controller
 
     public function store(Request $request) 
     {
-        
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:4',
+        ]);
+
+        Profil::create($validated);
+        return redirect()->route('profiles.index');
     }
 }
