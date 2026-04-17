@@ -9,7 +9,10 @@
         <a class="nav-link" href="/">Accueil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/profil">Mon profil</a>
+        <a class="nav-link" href={{ route('profil.index') }}>Mon profil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href='/profil/create'>Ajouter profil</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/info">Mes informations</a>

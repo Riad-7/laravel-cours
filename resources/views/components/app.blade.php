@@ -10,6 +10,7 @@
 </head>
 <body>
     @include('partials.nav')
+    @include('components.flashbag')
     <main>
         {{ $slot }}
     </main>

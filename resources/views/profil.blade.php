@@ -1,6 +1,5 @@
 <x-app title="profil">
-    <x-alert type='success'>
-        👍
-    </x-alert>
+    
+    <x-users-table :users="$profils" />
 </x-app>
 

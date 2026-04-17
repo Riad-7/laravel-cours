@@ -4,6 +4,5 @@
     </x-alert>
     <h1>Home</h1>
 
-    <x-users-table :users="$users" />
 </x-app>
 
